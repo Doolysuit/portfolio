@@ -1,0 +1,805 @@
+@charset "utf-8";
+
+* {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clear {
+    clear: both;
+}
+@font-face {
+    src: url('../fonts/NanumMyeongjo.otf');
+    font-family: 'nanum';
+}
+@font-face {
+    src: url('../fonts/NanumMyeongjoBold.otf');
+    font-family: 'nanumbold';
+}
+@font-face {
+    src: url('../fonts/NanumMyeongjoExtraBold.otf');
+    font-family: 'nanumbold1';
+}
+
+/* header ------------- */
+.container .gotop i {
+    cursor: pointer;
+    padding: 24px;
+    color: #ffffff;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 999;
+    transition: all .5s;
+    font-size: 2rem;
+}
+.container .gotop i:hover {
+    bottom: 45px;
+}
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #212121;
+    position: sticky;
+    top: 0;left: 0;
+    box-shadow: 0px 0px 7px -3px #fff;
+    z-index: 999;
+}
+header .container {
+    width: 100%;
+}
+header .inner {
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+header .inner p {
+    color: #fff;
+}
+header .inner .name {}
+header .inner .name P{
+    font-size: 1.25rem;
+    font-family: 'nanum';
+}
+header .inner .menu{
+    display: flex;
+    gap: 60px;
+}
+header .inner .menu a {
+    padding: 20px;
+    transition: all .3s;
+}
+header .inner .menu a:hover {
+    text-shadow: 7px 7px 10px #fff;
+}
+header .inner .menu a p {
+    font-size: 1.25rem;
+    font-family: 'nanum';
+}
+
+
+
+/* section1 --------------- */
+main {
+    width: 100%;
+    /* background-color: #212121; */
+}
+main .section1  {
+    width: 100%;
+}
+main .section1 .inner {
+    width: 80%;
+    height: 95vh;
+    padding: 230px 0 0 0;
+    margin: 0 auto;
+}
+main .section1 .inner p {
+    font-size: 17.5rem;
+    color: #fff;
+    font-family: 'nanum';
+    opacity: .8;
+
+}
+main .section1 .inner .line1 {
+    animation: line linear .7s;
+    animation-delay: .5s;
+}
+main .section1 .inner span {
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'nanum';
+    opacity: .8;
+
+}
+main .section1 .inner .line {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin: 3rem 0;
+}
+main .section1 .inner .line2 {
+    animation: line linear .7s;
+    animation-delay: 1s;
+}
+
+@keyframes line {
+    0% {
+        width: 0;
+        opacity: .1;
+    }
+    100% {
+        width: 100%;
+        opacity: .8;
+    }
+}
+
+/* section2 ------------------------- */
+.section2 {
+    width: 100%;
+    /* height: 100vh; */
+    position: relative;
+}
+.section2 h1 {
+    font-family: 'nanumbold1';
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 0 0 120px 0;
+    padding: 100px 0 0 0;
+}
+.section2 .bg {
+    position: absolute;
+    top: 65.5%;left: 0;
+    transform: translateY(-50%);
+    width: 30%;
+    height: 50vh;
+    background-color: #A9CEC2;
+    background: linear-gradient(to left , #1C3C33 ,#A9CEC2);
+    border-radius: 0 50% 0 0;
+    box-shadow: -3px -3px 10px -3px white;
+}
+.section2 .inner {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 150px; */
+}
+.section2 .inner .left-box {
+    width: 50%;
+    height: 50%;
+    flex: 1;
+}
+.section2 .inner .left-box img  {
+    width: 20%;
+    height: 50%;
+    position: absolute;
+    top: 69.2%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+.section2 .inner .right-box {
+    width: 50%;
+    flex: 1;
+}
+.section2 .inner .right-box .icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.section2 .inner .right-box .icon p {
+    font-family: 'nanum';
+    color: #fff;
+    margin: 0 0 0 30px;
+    /* float: right; */
+    font-size: 1.5rem;
+}
+.section2 .inner .right-box .icon p span {
+    display: block;
+    margin: 10px 0 0 ;
+}
+.section2 .inner .right-box .icon i .mid {}
+.section2 .inner .right-box .file i {
+    color: #fff;
+}
+.section2 .inner .right-box .file a {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 30px 0 ;
+}
+.section2 .inner .right-box .file a span:hover i {
+    opacity: 1;
+    left: 64%;
+    animation: arrow linear .3s;
+}
+.section2 .inner .right-box .file a span i {
+    opacity: 0;
+    position: absolute;
+    left: 60%;
+}
+@keyframes arrow {
+    0% {left: 60%;
+    opacity: 0;}
+    100% {left: 64%;
+        opacity: 1;}
+}
+.inner .right-box .file a::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+.section2 i {
+    color: #fff;
+    font-size: 2rem;
+    padding: 20px 0;
+}
+.section2 .inner .right-box .icon:nth-child(6) i {
+    margin: 0 0 20px;
+}
+
+.section1, .section2, .section3 {
+    background-color: #212121;
+}
+/* section3 ---------------------- */
+.section3 {
+    width: 100%;
+    /* height: 100vh; */
+    position: relative;
+    /* background-color: #212121; */
+    background: linear-gradient(to bottom, #212121 , #464362);
+    /* background: linear-gradient(to bottom, #212121 , #3A3751); */
+    /* background: linear-gradient(to bottom, #212121 , #323046); */
+    background: linear-gradient(to bottom, #212121 , #302E42);
+}
+.section3 h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 0 0 120px 0;
+    padding: 100px 0 0 0;
+    font-family: 'nanumbold1';
+    color: #fff;
+}
+.section3 .inner {
+    width: 80%;
+    margin: 0 auto;
+}
+.section3 .inner .center {
+    display: flex;
+    justify-content:flex-end;
+}
+.section3 .inner .center .box {
+    /* height: 150px; */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0 0 100px;
+}
+.section3 .inner .center img {
+    width: 80px;
+    height: 80px;
+}
+.section3 .inner .center p {
+    font-size: 2rem;
+    font-family: 'nanum';
+    width: 80%;
+    color: #fff;
+}
+.section3 .inner .center .left {
+    width: 46%;
+}
+.section3 .inner .center .right {
+    width: 40%;
+}
+.section3 .inner .bottom p {
+    font-size: 2.3rem;
+    font-family: 'nanum';
+    color: #fff;
+    text-align: center;
+} 
+
+/* section4 ---------------------- */
+.section4 {
+    width: 100%;
+    background-color: #212121;
+    background: linear-gradient(to bottom, #464362, #212121);
+    /* background: linear-gradient(to bottom, #3A3751, #212121); */
+    /* background: linear-gradient(to bottom, #323046, #212121); */
+    background: linear-gradient(to bottom, #302E42, #212121);
+}
+.section4 h1,
+.section4 h3 {
+    color: #fff;
+    text-align: center;
+}
+.section4 h1 {
+    padding: 100px 0 0 0;
+    font-size: 3.5rem;
+}
+.section4 h3 {
+    margin: 30px 0 0 0;
+    font-size: 1.5rem;
+}
+.section4 .h3 {
+    margin: 70px 0 0 0;
+}
+.section4 .inner {
+    width: 80%;
+    margin: 0 auto;
+}
+.section4 .inner .inner-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0 0 0;
+    padding: 0 0 80px 0;
+    gap: 21rem;
+    border-bottom: 1px solid #6d6d6d;
+}
+.section4 .inner .inner-box:nth-child(odd), 
+.section4 .inner .gucci-re {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.section4 .inner .clone {}
+.section4 .inner img {
+    width: 413px;
+    height: 330px;
+}
+.section4 .inner .gegomall .img-box > img {
+    width: 561px;
+    height: 360px;
+}
+.section4 .inner .text-box {
+    /* margin: 0 0 60px 0; */
+    width: 26%;
+}
+.section4 .inner .text-box p {
+    margin: 30px 0;
+    color: #fff;
+    opacity: .7;
+    font-size: 1.5rem;
+    font-family: 'nanum';
+}
+.section4 .inner .text-box p:first-child {
+    margin: 30px 0 50px 0;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 1;
+}
+.section4 .inner .redesign {}
+.section4 .inner .renewal .gegomall {
+    margin: 80px 0 0 0;
+}
+.section4 .inner .renewal .gegomall > img {
+    width: 500px;
+}
+/* .section4 .inner .renewal .gegomall .text-box {
+    width: 33%;
+} */
+.section4 .img-box {
+    position: relative;
+}
+.section4 .img-box .mask {
+    position: absolute;
+    top: 15px;left: 18px;
+    width: 92%;
+    height: 63%;
+    background-color: #ededed;
+    opacity: .8;
+    opacity: 0;
+}
+.section4 .clip {
+    position: absolute;
+    top: 40%;left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+.section4 .clip img {
+    width: 100%;
+    height: 50%;
+    margin: 0 0 20px;
+}
+.section4 .clip .btn {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+.section4 .clip .btn a {
+    font-family: 'nanum';
+    /* line-height: 40px; */
+    border: 1px solid;
+    padding: .4rem;
+    border-radius: 50px;
+    width: 40%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.section4 .clip .btn a:first-child {
+    width: 55%;
+}
+.section4 .clip .btn a:hover {
+    background-color: #212121;
+    transition: all .7s;
+    color: #fff;
+}
+.section4 .img-box:hover .mask {
+    opacity: .7;
+}
+.section4 .img-box:hover .clip {
+    opacity: 1;
+    transition: all .5s;
+}
+.section4 .gegomall .mask {
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    top: 0;left: 0;
+}
+.section4 .gegomall .clip {
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* section5-------------------------------- */
+.section5 {
+    width: 100%;
+    height: 100vh;
+    background-color: #212121;
+    position: relative;
+}
+.section5 h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 0 0 120px 0;
+    padding: 100px 0 0 0;
+    font-family: 'nanumbold1';
+    color: #fff;
+}
+.section5 .inner {
+    width: 80%;
+    /* height: 100%; */
+    margin: 0 auto;
+}
+.section5 .inner .img-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    position: absolute;
+    top: 0;left: 0;
+
+}
+.section5 .inner .img-box img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    position: absolute;
+}
+.section5 .inner .img-box .img1 {
+    top: 42%;
+    left: 57%;
+}
+.section5 .inner .img-box .img2 {
+    top: 26%;
+    left: 51.5%;
+}
+.section5 .inner .img-box .img3 {
+    top: 59%;
+    left: 51.5%;
+}
+.section5 .inner .img-box .img4 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.section5 .inner .img-box .img5 {
+    top: 60%;
+    left: 27.5%;
+}
+.section5 .inner .img-box .img6 {
+    top: 59%;
+    left: 39.5%;
+}
+.section5 .inner .img-box .img7 {
+    top: 76%;
+    left: 33.5%;
+}
+.section5 .inner .img-box div {
+    width: 100px;
+    height: 2px;
+    /* background-color: #fff; */
+    position: absolute;
+}
+
+.section5 .inner .img-box .div1 {
+    top: 50%;
+    left: 68%;
+}
+.section5 .inner .img-box .div2 {
+    top: 34%;
+    left: 62.5%;
+}
+.section5 .inner .img-box .div3 {
+    top: 67%;
+    left: 62.5%;
+}
+.section5 .inner .img-box .div4 {
+    top: 41%;
+    left: 38%;
+    /* transform: rotate(33deg); */
+}
+.section5 .inner .img-box .div5 {
+    top: 60%;
+    left: 22.5%;
+    /* transform: rotate(38deg); */
+}
+.section5 .inner .img-box .div6 {
+    top: 81%;
+    left: 45.5%;
+    /* transform: rotate(57deg); */
+}
+.section5 .inner .img-box .div7 {
+    top: 83%;
+    left: 24.5%;
+}
+
+.section5 .inner .img-box .div1::after,
+.section5 .inner .img-box .div2::after,
+.section5 .inner .img-box .div3::after,
+.section5 .inner .img-box .div4::after,
+.section5 .inner .img-box .div5::after,
+.section5 .inner .img-box .div6::after,
+.section5 .inner .img-box .div7::after {
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: 'nanum';
+    position: absolute;
+    width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+.section5 .inner .img-box .img1:hover ~ .div1::after,
+.section5 .inner .img-box .img2:hover ~ .div2::after,
+.section5 .inner .img-box .img3:hover ~ .div3::after,
+.section5 .inner .img-box .img4:hover ~ .div4::after,
+.section5 .inner .img-box .img5:hover ~ .div5::after,
+.section5 .inner .img-box .img6:hover ~ .div6::after,
+.section5 .inner .img-box .img7:hover ~ .div7::after {
+    opacity: 1;
+    visibility: visible;
+}
+.section5 .inner .img-box .div1::after {
+    content: '<div> 웹 표준에 맞추며 효율적으로 구조를 작성할 수 있습니다.</div>';
+    top: -38px;
+    left: 120%;
+}
+.section5 .inner .img-box .div2::after {
+    content: 'div { 반응형으로 만들기 쉽게 배치하여 디자인 작업을 표현할 수 있습니다.}';
+    top: -38px;left: 120%;
+}
+.section5 .inner .img-box .div3::after {
+    content: 'let js = 동적인 페이지가 될 수 있게 사용할 수 있으며 프론트 엔드 개발을 공부하고 있습니다.';
+    top: -38px;
+    left: 120%;
+}
+.section5 .inner .img-box .div4::after {
+    content: '$(function() {이벤트 처리와 html 문서를 조작하며 swiper, fullpage 등을 이용할 수 있습니다.})';
+    top: 10px;
+    left: -295%;
+    /* transform: rotate(-38deg); */
+}
+.section5 .inner .img-box .div5::after {
+    content: '와이어 프레임과 어트랙션을 사용할 수 있으며 디자인을 할 수 있습니다.';
+    top: -25px;
+    left: -300%;
+    /* transform: rotate(-32deg); */
+}
+.section5 .inner .img-box .div6::after {
+    content: '간단한 합성과 목업을 사용할 수 있습니다';
+    top: 0px;
+    left: 74%;
+    /* transform: rotate(-57deg); */
+    width: 220px;
+}
+.section5 .inner .img-box .div7::after {
+    content: '간단한 이모티콘 배너를 수정할 수 있습니다';
+    top: -10px;
+    left: -350%;
+}
+
+/* 반응형 950  */
+.section5-respon {
+    width: 100%;
+    background-color: #212121;
+    display: none;
+}
+.section5-respon h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 0 0 120px 0;
+    padding: 100px 0 0 0;
+    font-family: 'nanumbold1';
+    color: #fff;
+}
+.section5-respon .inner {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.section5-respon .inner img {
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    object-fit:cover;
+}
+.section5-respon .inner .img {
+    position: relative;
+    margin: 1rem 0;
+}
+.section5-respon .inner .img-lrft {}
+.section5-respon .inner .img-right {}
+.section5-respon .img1::after,
+.section5-respon .img2::after,
+.section5-respon .img3::after,
+.section5-respon .img4::after,
+.section5-respon .img5::after,
+.section5-respon .img6::after,
+.section5-respon .img7::after {
+    top: 50%;left: 55%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    color: #fff;
+    font-family: 'nanum';
+    font-size: 1.1rem;
+    word-break: keep-all;
+}
+.section5-respon .img1::after {
+    position: absolute;
+    content: '<div> 웹 표준에 맞추며 효율적으로 구조를 작성 할 수 있습니다.</div>';
+    display: block;
+}
+.section5-respon .img2::after {
+    position: absolute;
+    content: 'div { 반응형으로 만들기 쉽게 배치를 하여 디자인 작업을 표현할 수 있습니다.}';
+    display: block;
+}
+.section5-respon .img3::after {
+    position: absolute;
+    content: 'let js = 동적인 페이지가 될 수 있게 사용할 수 있으며 프론트 엔드 개발을 공부하고 있습니다.';
+    display: block;
+    color: #000;
+    font-weight: 600;
+}
+.section5-respon .img4::after {
+    position: absolute;
+    content: '$(function() { 이벤트 처리와 html 문서를 조작하며 swiper,fullpage 등을 이용 할 수 있습니다.})';
+    display: block;
+    color: #000;
+    font-weight: 600;
+}
+.section5-respon .img5::after {
+    position: absolute;
+    content: '와이어 프레임과 어트랙션을 사용할 수 있으며 디자인을 할 수 있습니다.';
+    display: block;
+}
+.section5-respon .img6::after {
+    position: absolute;
+    content: '간단한 합성과 목업을 사용 할 수 있습니다';
+    display: block;
+    color: #000;
+    font-weight: 600;
+}
+.section5-respon .img7::after {
+    position: absolute;
+    content: '간단한 이모티콘 배너를 수정 할 수 있습니다';
+    display: block;
+}
+/* 반응형 950  */
+
+/* footer -------------------------------------------------------------- */
+footer {
+    padding: 100px 0 0 0;
+    width: 100%;
+    background-color: #212121;
+    border-top: 1px solid #535353;
+}
+footer .footer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer .inner-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 150px;
+}
+footer .footer .inner-top .left {
+    width: 30%;
+}
+footer .footer .inner-top .left .flex {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+footer .footer .inner-top .left img {
+    margin:  0 50px 0;
+    width: 40px;
+    height: 40px;
+}
+footer .footer .inner-top .left p {
+    color: #fff;
+    font-family: 'nanum';
+    word-break: keep-all;
+}
+footer .footer .inner-top .left .top {
+    margin-top: 0;
+}
+footer .footer .inner-top .left .mid {}
+footer .footer .inner-top .left .bot {}
+footer .footer .inner-top .right {
+    width: 30%;
+}
+footer .footer .inner-top .right p {
+    font-size: 1rem;
+    color: #fff;
+    font-family: 'nanum';
+    margin: 18px 0;
+    word-break: keep-all;
+}
+footer .footer .inner-top .right p:first-child {
+    margin-top: 8px;
+}
+footer .footer .inner-bot {
+    width: 83%;
+    display: flex;
+    justify-content:flex-end;
+}
+footer .footer .inner-bot .ico {
+    width: 75%;
+    margin: 15px 0 0;
+    /* text-align: center; */
+}
+footer .footer .inner-bot a {}
+footer .footer .inner-bot a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+}
+footer .footer .inner-bot #clock {
+    font-size: 1.7rem;
+    width: 21%;
+    color: #fff;
+    text-align/: center;
+    line-height: 70px;
+}
+.footer > p {
+    font-size: .8rem;
+    font-family: 'nanum';
+    color: #818181;
+    text-align: center;
+    margin: 50px 0 20px 0; 
+}
